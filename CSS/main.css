@@ -181,6 +181,9 @@ header img {
   .hero {
     height: 500px;
   }
+  .hero_title .hero_input input {
+    width: 100%;
+  }
 }
 /* stats */
 .stats {
@@ -221,6 +224,19 @@ header img {
 }
 .stats_item h2 {
   color: gold;
+}
+@media screen and (max-width: 789px) {
+  .stats_container {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem;
+  }
+  .stats_content {
+    width: 100%;
+  }
+  .stats_item {
+    width: 100%;
+  }
 }
 /* appartments */
 .appartments {
@@ -305,6 +321,21 @@ header img {
   outline: none;
   font-size: 18px;
 }
+@media screen and (max-width: 789px) {
+  .appartments h2 {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .appartment_bottom {
+    flex-direction: column;
+  }
+  .appartment_search {
+    width: 100%;
+  }
+  .appartment_search input {
+    width: 100%;
+  }
+}
 /* how it works ? */
 .howItWorks {
   width: 100%;
@@ -382,6 +413,21 @@ header img {
   font-weight: bold;
   color: #000;
 }
+@media screen and (max-width: 789px) {
+  .services {
+    padding: 10px;
+  }
+  .services_container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .services_img {
+    width: 100%;
+  }
+  .services_img img {
+    width: 100%;
+  }
+}
 /* footer */
 footer {
   width: 100%;
@@ -446,6 +492,35 @@ footer {
 .footer_bottom_right ul h3 {
   margin-bottom: 2rem;
   font-size: 25px;
+}
+@media screen and (max-width: 789px) {
+  footer {
+    padding: 1rem 0;
+    margin: 0;
+  }
+  .footer_top {
+    flex-direction: column;
+  }
+  .footer_top_input input {
+    width: 100%;
+  }
+  .footer_bottom {
+    flex-direction: column;
+  }
+  .footer_bottom_left {
+    width: 100%;
+    text-align: center;
+  }
+  .footer_bottom_right {
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    flex-wrap: wrap;
+  }
 }
 /* Home Page End */
 
@@ -553,11 +628,9 @@ footer {
   width: 100%;
   padding: 1rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-}
-.details_item img {
-  width: 600px;
+  flex-direction: column;
 }
 .details_content {
   width: 600px;
@@ -565,20 +638,27 @@ footer {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  gap: 1rem;
 }
 .details_content h2 {
   font-size: 2rem;
   color: goldenrod;
   font-weight: bold;
 }
-.details_content span {
-  font-size: bold;
-  font-size: 25px;
-}
-.details_content p {
-  width: 400px;
-  font-weight: bold;
+.details_content pre {
+  width: 100%;
+  background-color: #fdf8f4; /* Soft beige background for a luxury feel */
+  border: 2px solid #e8d8c3; /* A golden-beige border for elegance */
+  border-radius: 8px; /* Slightly rounded corners for a modern touch */
+  padding: 20px; /* Padding to make the content feel spacious */
+  color: #2a2a2a; /* Dark gray text for readability */
+  font-family: "Georgia", serif; /* Elegant serif font */
+  font-size: 16px; /* Comfortable reading size */
+  line-height: 1.8; /* Increased line height for readability */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 20px 0; /* Margin for spacing */
+  overflow-x: auto; /* Handle overflow gracefully for long text */
+  text-align: left; /* Ensure text alignment is consistent */
+  white-space: pre-wrap; /* Allow line wrapping while maintaining the preformatted look */
 }
 .details_content .stars i {
   color: goldenrod;
@@ -596,17 +676,32 @@ footer {
 .details_content .stars i:last-child {
   color: gray;
 }
+.carousel .carousel-inner .carousel-item {
+  width: 800px;
+  height: 500px;
+}
+.carousel .carousel-inner .carousel-item img {
+  width: 100%;
+  height: 100%;
+}
 @media screen and (max-width: 789px) {
   .details_item {
-    flex-direction: column;
-  }
-  .details_item img {
+    padding: 10px;
+    margin: 0;
     width: 100%;
+  }
+  .details_content h2 {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+  .carousel {
+    width: 100%;
+  }
+  .carousel .carousel-inner .carousel-item {
+    width: 100%;
+    height: 400px;
   }
   .details_content {
-    width: 100%;
-  }
-  .details_content p {
     width: 100%;
   }
 }
@@ -660,4 +755,9 @@ footer {
   font-weight: bold;
   text-align: center;
   display: none;
+}
+@media screen and (max-width: 789px) {
+  .contact_form {
+    width: 90%;
+  }
 }
